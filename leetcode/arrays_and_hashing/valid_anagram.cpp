@@ -7,7 +7,7 @@ using Param = std::tuple<std::string, std::string, bool>;
 
 class Solution1 : public testing::TestWithParam<Param> {
 public:
-    ///   time: O(nlong n) + O(nlg n) => O(nlog n)
+    ///   time: O(n*lg n) + O(n*lg n) => O(n*lg n)
     ///   memory: O(1)
     bool isAnagram(std::string s, std::string t) {
         if (!s.size() || !t.size() || s.size() != t.size()) {
