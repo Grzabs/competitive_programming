@@ -21,9 +21,13 @@ target_link_libraries(length_of_last_word PUBLIC GTest::gtest_main)
 add_executable(two_sum two_sum.cpp)
 target_link_libraries(two_sum PUBLIC GTest::gtest_main)
 
+add_executable(longest_common_prefix longest_common_prefix.cpp)
+target_link_libraries(longest_common_prefix PUBLIC GTest::gtest_main)
+
 gtest_discover_tests(concatenation_of_array)
 gtest_discover_tests(contains_duplicate)
 gtest_discover_tests(replace_with_greates_on_right)
 gtest_discover_tests(is_subsequence)
 gtest_discover_tests(length_of_last_word)
 gtest_discover_tests(two_sum)
+gtest_discover_tests(longest_common_prefix)
