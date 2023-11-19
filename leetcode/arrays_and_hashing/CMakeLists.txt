@@ -15,7 +15,27 @@ target_link_libraries(replace_with_greates_on_right PUBLIC GTest::gtest_main)
 add_executable(is_subsequence is_subsequence.cpp)
 target_link_libraries(is_subsequence PUBLIC GTest::gtest_main)
 
+add_executable(length_of_last_word length_of_last_word.cpp)
+target_link_libraries(length_of_last_word PUBLIC GTest::gtest_main)
+
+add_executable(two_sum two_sum.cpp)
+target_link_libraries(two_sum PUBLIC GTest::gtest_main)
+
+add_executable(longest_common_prefix longest_common_prefix.cpp)
+target_link_libraries(longest_common_prefix PUBLIC GTest::gtest_main)
+
+add_executable(group_anagrams group_anagrams.cpp)
+target_link_libraries(group_anagrams PUBLIC GTest::gtest_main)
+
+add_executable(pascal_triangle pascal_triangle.cpp)
+target_link_libraries(pascal_triangle PUBLIC GTest::gtest_main)
+
 gtest_discover_tests(concatenation_of_array)
 gtest_discover_tests(contains_duplicate)
 gtest_discover_tests(replace_with_greates_on_right)
 gtest_discover_tests(is_subsequence)
+gtest_discover_tests(length_of_last_word)
+gtest_discover_tests(two_sum)
+gtest_discover_tests(longest_common_prefix)
+gtest_discover_tests(group_anagrams)
+gtest_discover_tests(pascal_triangle)
