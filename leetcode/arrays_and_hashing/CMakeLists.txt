@@ -15,7 +15,15 @@ target_link_libraries(replace_with_greates_on_right PUBLIC GTest::gtest_main)
 add_executable(is_subsequence is_subsequence.cpp)
 target_link_libraries(is_subsequence PUBLIC GTest::gtest_main)
 
+add_executable(length_of_last_word length_of_last_word.cpp)
+target_link_libraries(length_of_last_word PUBLIC GTest::gtest_main)
+
+add_executable(two_sum two_sum.cpp)
+target_link_libraries(two_sum PUBLIC GTest::gtest_main)
+
 gtest_discover_tests(concatenation_of_array)
 gtest_discover_tests(contains_duplicate)
 gtest_discover_tests(replace_with_greates_on_right)
 gtest_discover_tests(is_subsequence)
+gtest_discover_tests(length_of_last_word)
+gtest_discover_tests(two_sum)
