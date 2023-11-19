@@ -12,6 +12,10 @@ target_link_libraries(valid_anagram PUBLIC GTest::gtest_main)
 add_executable(replace_with_greates_on_right replace_with_greates_on_right.cpp)
 target_link_libraries(replace_with_greates_on_right PUBLIC GTest::gtest_main)
 
+add_executable(is_subsequence is_subsequence.cpp)
+target_link_libraries(is_subsequence PUBLIC GTest::gtest_main)
+
 gtest_discover_tests(concatenation_of_array)
 gtest_discover_tests(contains_duplicate)
 gtest_discover_tests(replace_with_greates_on_right)
+gtest_discover_tests(is_subsequence)
