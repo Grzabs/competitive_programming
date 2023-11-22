@@ -40,6 +40,9 @@ target_link_libraries(unique_email_addresses PUBLIC GTest::gtest_main)
 add_executable(can_place_flowers can_place_flowers.cpp)
 target_link_libraries(can_place_flowers PUBLIC GTest::gtest_main)
 
+add_executable(majority_element majority_element.cpp)
+target_link_libraries(majority_element PUBLIC GTest::gtest_main)
+
 
 gtest_discover_tests(concatenation_of_array)
 gtest_discover_tests(contains_duplicate)
@@ -53,3 +56,4 @@ gtest_discover_tests(pascal_triangle)
 gtest_discover_tests(remove_element)
 gtest_discover_tests(unique_email_addresses)
 gtest_discover_tests(can_place_flowers)
+gtest_discover_tests(majority_element)
