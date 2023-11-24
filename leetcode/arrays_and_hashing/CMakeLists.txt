@@ -46,6 +46,12 @@ target_link_libraries(majority_element PUBLIC GTest::gtest_main)
 add_executable(next_bigger_element next_bigger_element.cpp)
 target_link_libraries(next_bigger_element PUBLIC GTest::gtest_main)
 
+add_executable(find_pivot_index find_pivot_index.cpp)
+target_link_libraries(find_pivot_index PUBLIC GTest::gtest_main)
+
+add_executable(range_sum_query range_sum_query.cpp)
+target_link_libraries(range_sum_query PUBLIC GTest::gtest_main)
+
 
 gtest_discover_tests(concatenation_of_array)
 gtest_discover_tests(contains_duplicate)
@@ -61,3 +67,5 @@ gtest_discover_tests(unique_email_addresses)
 gtest_discover_tests(can_place_flowers)
 gtest_discover_tests(majority_element)
 gtest_discover_tests(next_bigger_element)
+gtest_discover_tests(find_pivot_index)
+gtest_discover_tests(range_sum_query)
