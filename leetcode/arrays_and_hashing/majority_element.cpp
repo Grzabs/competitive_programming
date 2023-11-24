@@ -24,9 +24,19 @@ class Solution2 : public testing::TestWithParam<Param> {
 public:
     // cpu: O(n)
     // memory: O(1)
+    // 2,1,2,1,2
+    // 1,2,3,2,1,2,2
     int majorityElement(std::vector<int>& nums) {
-
-        return 0;
+        int count = 1;
+        int last = nums[0];
+        for (int i=1;i<nums.size();++i) {
+            count += nums[i] == last ? 1 : -1;
+           if (count==0) {
+                last=nums[i];
+                count=1;
+            }
+        }
+        return last;
     }
 };
 
