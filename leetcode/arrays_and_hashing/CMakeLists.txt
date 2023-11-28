@@ -55,6 +55,8 @@ target_link_libraries(range_sum_query PUBLIC GTest::gtest_main)
 add_executable(dissapeared_numbers dissapeared_numbers.cpp)
 target_link_libraries(dissapeared_numbers PUBLIC GTest::gtest_main)
 
+add_executable(maximum_number_of_balloons maximum_number_of_balloons.cpp)
+target_link_libraries(maximum_number_of_balloons PUBLIC GTest::gtest_main)
 
 gtest_discover_tests(concatenation_of_array)
 gtest_discover_tests(contains_duplicate)
@@ -73,3 +75,4 @@ gtest_discover_tests(next_bigger_element)
 gtest_discover_tests(find_pivot_index)
 gtest_discover_tests(range_sum_query)
 gtest_discover_tests(dissapeared_numbers)
+gtest_discover_tests(maximum_number_of_balloons)
