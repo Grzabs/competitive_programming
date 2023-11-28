@@ -52,6 +52,9 @@ target_link_libraries(find_pivot_index PUBLIC GTest::gtest_main)
 add_executable(range_sum_query range_sum_query.cpp)
 target_link_libraries(range_sum_query PUBLIC GTest::gtest_main)
 
+add_executable(dissapeared_numbers dissapeared_numbers.cpp)
+target_link_libraries(dissapeared_numbers PUBLIC GTest::gtest_main)
+
 
 gtest_discover_tests(concatenation_of_array)
 gtest_discover_tests(contains_duplicate)
@@ -69,3 +72,4 @@ gtest_discover_tests(majority_element)
 gtest_discover_tests(next_bigger_element)
 gtest_discover_tests(find_pivot_index)
 gtest_discover_tests(range_sum_query)
+gtest_discover_tests(dissapeared_numbers)
