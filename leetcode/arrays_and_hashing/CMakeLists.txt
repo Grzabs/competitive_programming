@@ -1,90 +1,16 @@
 
 
-add_executable(concatenation_of_array concatenation_of_array.cpp)
-target_link_libraries(concatenation_of_array PUBLIC GTest::gtest_main)
+function(add_test test_name)
+    add_executable(${test_name} ${test_name}.cpp)
+    target_link_libraries(${test_name} PUBLIC GTest::gtest_main)
 
-add_executable(contains_duplicate contains_duplicate.cpp)
-target_link_libraries(contains_duplicate PUBLIC GTest::gtest_main)
-
-add_executable(valid_anagram valid_anagram.cpp)
-target_link_libraries(valid_anagram PUBLIC GTest::gtest_main)
-
-add_executable(replace_with_greates_on_right replace_with_greates_on_right.cpp)
-target_link_libraries(replace_with_greates_on_right PUBLIC GTest::gtest_main)
-
-add_executable(is_subsequence is_subsequence.cpp)
-target_link_libraries(is_subsequence PUBLIC GTest::gtest_main)
-
-add_executable(length_of_last_word length_of_last_word.cpp)
-target_link_libraries(length_of_last_word PUBLIC GTest::gtest_main)
-
-add_executable(two_sum two_sum.cpp)
-target_link_libraries(two_sum PUBLIC GTest::gtest_main)
-
-add_executable(longest_common_prefix longest_common_prefix.cpp)
-target_link_libraries(longest_common_prefix PUBLIC GTest::gtest_main)
-
-add_executable(group_anagrams group_anagrams.cpp)
-target_link_libraries(group_anagrams PUBLIC GTest::gtest_main)
-
-add_executable(pascal_triangle pascal_triangle.cpp)
-target_link_libraries(pascal_triangle PUBLIC GTest::gtest_main)
-
-add_executable(remove_element remove_element.cpp)
-target_link_libraries(remove_element PUBLIC GTest::gtest_main)
+    gtest_discover_tests(${test_name})
+endfunction()
 
 
-add_executable(unique_email_addresses unique_email_addresses.cpp)
-target_link_libraries(unique_email_addresses PUBLIC GTest::gtest_main)
+file(GLOB SOURCES *.cpp)
+foreach (file ${SOURCES})
+    get_filename_component(test_name ${file} NAME_WE)
+    add_test(${test_name})
+endforeach ()
 
-add_executable(can_place_flowers can_place_flowers.cpp)
-target_link_libraries(can_place_flowers PUBLIC GTest::gtest_main)
-
-add_executable(majority_element majority_element.cpp)
-target_link_libraries(majority_element PUBLIC GTest::gtest_main)
-
-add_executable(next_bigger_element next_bigger_element.cpp)
-target_link_libraries(next_bigger_element PUBLIC GTest::gtest_main)
-
-add_executable(find_pivot_index find_pivot_index.cpp)
-target_link_libraries(find_pivot_index PUBLIC GTest::gtest_main)
-
-add_executable(range_sum_query range_sum_query.cpp)
-target_link_libraries(range_sum_query PUBLIC GTest::gtest_main)
-
-add_executable(dissapeared_numbers dissapeared_numbers.cpp)
-target_link_libraries(dissapeared_numbers PUBLIC GTest::gtest_main)
-
-add_executable(maximum_number_of_balloons maximum_number_of_balloons.cpp)
-target_link_libraries(maximum_number_of_balloons PUBLIC GTest::gtest_main)
-
-add_executable(word_pattern word_pattern.cpp)
-target_link_libraries(word_pattern PUBLIC GTest::gtest_main)
-
-add_executable(hash_set hash_set.cpp)
-target_link_libraries(hash_set PUBLIC GTest::gtest_main)
-
-add_executable(hash_map hash_map.cpp)
-target_link_libraries(hash_map PUBLIC GTest::gtest_main)
-
-gtest_discover_tests(concatenation_of_array)
-gtest_discover_tests(contains_duplicate)
-gtest_discover_tests(replace_with_greates_on_right)
-gtest_discover_tests(is_subsequence)
-gtest_discover_tests(length_of_last_word)
-gtest_discover_tests(two_sum)
-gtest_discover_tests(longest_common_prefix)
-gtest_discover_tests(group_anagrams)
-gtest_discover_tests(pascal_triangle)
-gtest_discover_tests(remove_element)
-gtest_discover_tests(unique_email_addresses)
-gtest_discover_tests(can_place_flowers)
-gtest_discover_tests(majority_element)
-gtest_discover_tests(next_bigger_element)
-gtest_discover_tests(find_pivot_index)
-gtest_discover_tests(range_sum_query)
-gtest_discover_tests(dissapeared_numbers)
-gtest_discover_tests(maximum_number_of_balloons)
-gtest_discover_tests(word_pattern)
-gtest_discover_tests(hash_set)
-gtest_discover_tests(hash_map)
